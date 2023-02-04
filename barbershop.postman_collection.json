@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "89e05534-1d5e-44c6-9ac3-1f7a3fdb3a6c",
+		"name": "barbershop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21302615"
+	},
+	"item": [
+		{
+			"name": "LISTAR appointment",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{ID}BuscarId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/appointments/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"appointments",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear appointments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"date\": \"2023-03-11T16:30:00\",\r\n    \"duration\": 60,\r\n    \"description\": \"\",\r\n    \"customer\": {\r\n        \"id\": 1,\r\n        \"firstName\": \"Customer2\",\r\n        \"lastName\": \"lastname2\",\r\n        \"email\": \"customer2@example.com\",\r\n        \"birthDate\": \"1990-01-03\"\r\n    },\r\n    \"hairAssistance\": {\r\n        \"id\": 4,\r\n        \"name\": \"Corte pelo F\",\r\n        \"price\": 30.0,\r\n        \"duration\": 40\r\n    },\r\n    \"employee\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": null,\r\n    \"date\": \"2023-03-14T16:30:00\",\r\n    \"duration\": 50,\r\n    \"description\": \"\",\r\n    \"customer\": {\r\n        \"id\": 1,\r\n        \"firstName\": \"Customer1\",\r\n        \"lastName\": \"lastname1\",\r\n        \"email\": \"customer1@example.com\",\r\n        \"birthDate\": \"1990-01-03\"\r\n    },\r\n    \"hairAssistance\": {\r\n        \"id\": 4,\r\n        \"name\": \"Corte pelo F\",\r\n        \"price\": 30.0,\r\n        \"duration\": 40\r\n    },\r\n    \"employee\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calcular beneficio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/appointments/appointments/benefits/{year}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"appointments",
+						"appointments",
+						"benefits",
+						"{year}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar customers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "listar employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8085\n",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
